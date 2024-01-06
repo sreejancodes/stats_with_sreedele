@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eurovision 2024</title>
+    <!-- Pico CSS -->
+    <link rel="stylesheet" href="../static/pico-1.5.11/css/pico.css">
+     <!-- Flag Icon CSS -->
+     <link rel="stylesheet" href="../static/flag-icons/css/flag-icons.css">
+   
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="grid" style="display: flex; align-items: flex-end; padding: 20px; padding-bottom:100px;"> <!-- Flexbox container -->
+                <img src="../static/images/eurovision_logo.png" height="405" width="1280" alt="Eurovision Logo" style="padding-right: 10px;"> <!-- Padding to the image -->
+                <span style="font-size: 2rem; font-weight: 700; align-self: flex-end;">Eurovision 2024 (Sweden)</span> <!-- Align text to the bottom -->
+            </div>
+        </header>
+        
+
+
+        <form action="/submit_ratings" method="post">
+            <div class="grid">
+                <label for="ratingUK"><span class="fi fi-gb"></span> The United Kingdom</label>
+                <input type="number" id="ratingUK" name="ratingUK" min="0" max="10" step="0.01" required>
+            </div>
+
+            <div class="grid">
+                <label for="ratingFrance"><span class="fi fi-fr"></span> France</label>
+                <input type="number" id="ratingFrance" name="ratingFrance" min="0" max="10" step="0.01" required>
+            </div>
+
+            <button type="submit" class="btn">Submit Ratings</button>
+        </form>
+    </div>
+
+</body>
+</html>
